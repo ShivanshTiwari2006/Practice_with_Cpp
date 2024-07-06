@@ -3,24 +3,27 @@
 using namespace std;
 
 int main() {
-  int s;
-  int a;
-  int b;
-  int c;
+  int sideLength, sideA, sideB, sideC;
+  double area;
 
-  cout << "Enter side length of triangle:" << endl;
-  cin >> s;
+  cout << "Enter side length of triangle: ";
+  cin >> sideLength;
 
-  cout << "Enter side a: " << endl;
-  cin >> a;
+  cout << "Enter side a: ";
+  cin >> sideA;
 
-  cout << "Enter side b: " << endl;
-  cin >> b;
+  cout << "Enter side b: ";
+  cin >> sideB;
 
-  cout << "Enter side c: " << endl;
-  cin >> c;
+  cout << "Enter side c: ";
+  cin >> sideC;
 
-  int area = sqrt(s * (s - a) * (s - b) * (s - c));
+  // Check for valid triangle (sum of any two sides must be greater than the third)
+  // Implement this check before calculating area
+
+  int s = (sideA + sideB + sideC) / 2; // Semi-perimeter
+
+  area = sqrt(s * (s - sideA) * (s - sideB) * (s - sideC));
 
   cout << "Area of the triangle is: " << area << endl;
 
